@@ -1,0 +1,545 @@
+:root {
+    --ts-green: #BAB86C;
+    --ts-light-green: #C6C5AE;
+    --ts-dark-green: #7A7947;
+    --ts-darker-green: #3B3A34;
+
+    --ts-yellow: #FFD754;
+    --ts-light-yellow: #FFE9A1;
+    --ts-dark-yellow: #E6C24C;
+    --ts-darker-yellow: #403615;
+
+    --ts-white: #FFFFFA;
+
+    --transition: all .35s ease-in-out
+}  
+
+*{
+    box-sizing: border-box;
+}
+
+html, body, figure,ul,h1, h2,
+h3, h4, h5, h5, p{
+    padding:0;
+    margin:0;
+}
+ul{
+    list-style: none;
+}
+picture{
+    display: block;
+    margin:0;
+    padding:0;
+    line-height:0;
+}
+  
+a, a:hover, a:focus,a:visited, a:link{
+    text-decoration: none;
+    outline: none;
+    color: var(--ts-green);
+}
+
+body{
+    background-color: var(--ts-darker-green);
+    font-family: 'Arial', Helvetica, sans-serif;
+    color: var(--ts-white);
+}
+
+.tsFlex{
+    display: flex;
+    align-items: center;
+}
+
+.tsContainer{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.tsMobileNav{
+    display: none;
+}
+
+.tsBloc{
+    padding: 0 0 5rem;
+}
+
+.tsBtn, a.tsBtn{
+    background-color: var(--ts-yellow);
+    color: var(--ts-darker-green);
+    transition: var(--transition);
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.tsBtn:hover, 
+.tsBtn:focus {
+    background-color: var(--ts-dark-green);
+}
+
+.tsBtn img{
+    height: 12px;
+    width: auto;
+}
+
+header{
+    padding: 1rem 0;
+    transition: var(--transition);
+}
+header .tsFlex{
+    justify-content: space-between;
+    align-items: center;
+}
+header #tsLogo img{
+    height: 65px;
+}
+header ul a{
+    padding: 1rem;
+    display: block;
+    transition: var(--transition);
+}
+header ul a:hover,
+header ul a:focus{
+    background-color: var(--ts-light-green);
+    color: var(--ts-darker-green);
+    border-radius: 50px;
+}
+
+header ul li:last-of-type a{
+ background-color: var(--ts-green);
+ color: var(--ts-darker-green);
+ border-radius: 50px;
+ font-weight: bold;
+}
+
+.tsFixed{
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    position: fixed;
+    background-color: var(--ts-white);
+    padding: 0 0;
+}
+.tsFixed #tsLogo img{
+    height: 35px;
+}
+
+.tsFixed ul a{
+    padding: 1rem;
+    transition: var(--transition);
+}
+.tsFixed ul a:hover,
+.tsFixed ul a:focus{
+    background-color: var(--ts-green);
+    color: var(--ts-white);
+    border-radius: 0;
+}
+.tsFixed ul li:last-of-type a{
+    background-color: var(--ts-green);
+    color: var(--ts-white);
+    border-radius: 0;
+    font-weight: bold;
+}
+
+main img{
+    width:100%;
+    flex-wrap: wrap;
+}
+main .tsFlex{
+    justify-content: space-between;
+}
+main .tsFlex div{
+    flex: 0 0 45%;
+}
+
+main .tsFlex a.tsBtn{
+    display: inline-block;
+}
+
+main .tsBigText{
+    font-weight: bold;
+    font-size: 2rem;
+    margin: .65rem 0 2rem;
+}
+main .tsPastille{
+    font-weight: normal;
+    font-size: .8rem;
+    background-color: var(--ts-dark-green);
+    color: var(--ts-darker-green);
+    border-radius: 50px;
+    display: inline-block;
+    padding: .35rem .5rem;
+}
+
+form input, form button, form textarea{
+    outline: none;
+    border-radius: 50px;
+    padding: 1.35rem 2.5rem;
+    background-color: var(--ts-white);
+    display: block;
+    min-width:100%;
+    border: none;
+    box-shadow: 0 0 0 3px var(--ts-dark-green);
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+form input:focus, form textarea:focus{
+    box-shadow: 0 0 0 3px var(--ts-yellow);
+}
+
+form textarea{
+    min-width: 600px;
+    min-height: 100px;
+}
+form .tsPastille{
+    margin-bottom: 1rem;
+}
+main #tsInfosUtiles article{
+    position: relative;
+    padding: 0 0 2rem 75px;
+}
+main #tsInfosUtiles article h3{
+    font-size: 1.65rem;
+}
+
+main #tsInfosUtiles article img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    z-index: -1;
+    opacity: .35;
+}
+
+footer{
+    background-color: var(--ts-dark-green);
+}
+#footerTop{
+    position: relative;
+}
+#footerTop, #footerBottom{
+    padding: 2rem 0;
+}
+#footerBottom{
+    border-top: 1px solid var(--ts-darker-green);
+}
+#tsSocials .tsFlex{
+    gap: 10px;
+} 
+#tsSocials h3{
+    margin-bottom: 1rem;
+}
+#tsSocials img{
+    width: 50px;
+}
+#tsToTop img{
+    width: 25px;
+}
+#tsToTop{
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: var(--ts-yellow);
+    padding: 1rem 1.1rem;
+    border-radius: 50px;
+    transition: var(--transition);
+}
+#tsToTop:hover, #tsToTop:focus {
+    background-color: var(--ts-dark-yellow);
+}
+
+#tsQueFaisonsNous, 
+#tsQuiSommesNous {
+    border-bottom: 3px dashed var(--ts-dark-green);
+}
+
+#tsQueFaisonsNous, #tsCommentNousJoindre{
+    margin-top: 5rem;
+}
+
+header #tsX, header #tsY, header #tsZ{
+    width: 35px;
+    transition: all .2s ease-out;
+    height: 3px;
+    background-color: var(--ts-yellow);
+  }
+  
+  .displayNone{
+    display: none !important;
+  }
+  
+  .collapse{
+    top: -20px;
+    -webkit-transition: all 70ms ease-out;
+       -moz-transition: all 70ms ease-out;
+        -ms-transition: all 70ms ease-out;
+         -o-transition: all 70ms ease-out;
+            transition: all 70ms ease-out;
+  }
+  .rotate30, .rotate150, .rotate45, .rotate135{top:8px;}
+  .rotate30{
+    -webkit-transform: rotate(30deg); 
+       -moz-transform: rotate(30deg); 
+        -ms-transform: rotate(30deg); 
+         -o-transform: rotate(30deg); 
+            transform: rotate(30deg);
+            
+    -webkit-transition: all 50ms ease-out;
+       -moz-transition: all 50ms ease-out;
+        -ms-transition: all 50ms ease-out;
+         -o-transition: all 50ms ease-out;
+            transition: all 50ms ease-out;          
+  }
+  div.rotate150{
+    -webkit-transform: rotate(150deg); 
+       -moz-transform: rotate(150deg); 
+        -ms-transform: rotate(150deg); 
+         -o-transform: rotate(150deg); 
+            transform: rotate(150deg);
+            
+    -webkit-transition: all 50ms ease-out;
+       -moz-transition: all 50ms ease-out;
+        -ms-transition: all 50ms ease-out;
+         -o-transition: all 50ms ease-out;
+            transition: all 50ms ease-out;          
+  }
+  div.rotate45{
+      -webkit-transform: rotate(45deg);
+         -moz-transform: rotate(45deg); 
+          -ms-transform: rotate(45deg); 
+           -o-transform: rotate(45deg); 
+              transform: rotate(45deg);
+              
+    -webkit-transition: all 100ms ease-out;
+       -moz-transition: all 100ms ease-out;
+        -ms-transition: all 100ms ease-out;
+         -o-transition: all 100ms ease-out;
+            transition: all 100ms ease-out;         
+  }
+  div.rotate135{
+    -webkit-transform: rotate(135deg); 
+      -moz-transform: rotate(135deg); 
+       -ms-transform: rotate(135deg); 
+        -o-transform: rotate(135deg); 
+           transform: rotate(135deg);  
+           
+    -webkit-transition: all 100ms ease-out;
+       -moz-transition: all 100ms ease-out;
+        -ms-transition: all 100ms ease-out;
+         -o-transition: all 100ms ease-out;
+            transition: all 100ms ease-out;         
+  }
+  .rotate180{
+    -webkit-transform: rotate(180deg); 
+      -moz-transform: rotate(180deg); 
+       -ms-transform: rotate(180deg); 
+        -o-transform: rotate(180deg); 
+           transform: rotate(180deg);  
+           
+    -webkit-transition: all 100ms ease-out;
+       -moz-transition: all 100ms ease-out;
+        -ms-transition: all 100ms ease-out;
+         -o-transition: all 100ms ease-out;
+            transition: all 100ms ease-out;         
+  }
+  #tsMenuIcon{
+    height: 20px;
+  }
+  header #tsMobileNav{
+    z-index: 9999999999;
+    position: relative;
+  }
+  header #tsMobileNav .xhover{
+    width: 35px;
+    position: relative;
+  }
+  header #tsMobileNav #tsY, header #tsMobileNav #tsZ{
+    margin-top:.35rem;
+  }
+  #tsMenuIcon{
+    position: relative;
+    top: 999999999;
+  }
+
+#tsInfosUtiles a{
+    color: var(--ts-white);
+}
+
+#tsGallery .tsFlex{
+    width: 100%;
+}
+#tsGallery .tsFlex img{
+    flex: 0 1 25%;
+    max-width: 25%;
+    cursor: pointer;
+    filter: grayscale(1);
+    transition: var(--transition);
+}
+#tsGallery .tsFlex img:hover{
+    filter: grayscale(0);
+}
+
+#tswomanrh .st0, #tswomanrh .st1,
+#tswomanrh .st2, #tswomanrh .st3,
+#tswomanrh .st4, #tswomanrh .st5,
+#tswomanrh .st6, #tswomanrh .st7,
+#tswomanrh .st8, #tswomanrh .st9,
+#tswomanrh .st10, #tswomanrh .st11,
+#tswomanrh .st12 {
+    fill: none;
+}
+
+#tswomanrh.tsanimation .st0{fill:url(#SVGID_1_);}
+#tswomanrh.tsanimation .st1{fill:#3B3A34;}
+#tswomanrh.tsanimation .st2{fill:#33322D;}
+#tswomanrh.tsanimation .st3{fill:#F9F9F9;}
+#tswomanrh.tsanimation .st4{fill:#604B44;}
+#tswomanrh.tsanimation .st5{fill:#473833;}
+#tswomanrh.tsanimation .st6{fill:#332825;}
+#tswomanrh.tsanimation .st7{fill:none;stroke:url(#SVGID_2_);stroke-miterlimit:10;}
+#tswomanrh.tsanimation .st8{fill:#C6C5AE;}
+#tswomanrh.tsanimation .st9{fill:#332B11;}
+#tswomanrh.tsanimation .st10{fill:none;stroke:url(#SVGID_3_);stroke-miterlimit:10;}
+#tswomanrh.tsanimation .st11{fill:#34322D;}
+#tswomanrh.tsanimation .st12{fill:none;}
+
+#tsworkerrh .st0{fill:url(#SVGID_1_);}
+#tsworkerrh .st1{fill:#604B44;}
+#tsworkerrh .st2{fill:#33322D;}
+#tsworkerrh .st3{fill:#3B3A34;}
+#tsworkerrh .st4{fill:#BAB86C;}
+#tsworkerrh .st5{fill:#E6C24C;}
+#tsworkerrh .st6{fill:#FFFFFA;}
+#tsworkerrh .st7{fill:#FFD754;}
+#tsworkerrh .st8{fill:#F4E1EE;}
+#tsworkerrh .st9{opacity:0.35;}
+#tsworkerrh .st10{fill:#E67373;}
+#tsworkerrh .st11{display:none;}
+#tsworkerrh .st12{display:inline;}
+#tsworkerrh .st13{fill:url(#SVGID_18_);}
+#tsworkerrh .st14{opacity:0.35;clip-path:url(#SVGID_20_);}
+#tsworkerrh .st15{opacity:0.35;clip-path:url(#SVGID_22_);}
+#tsworkerrh .st16{opacity:0.35;clip-path:url(#SVGID_24_);}
+#tsworkerrh .st17{opacity:0.35;clip-path:url(#SVGID_26_);}
+#tsworkerrh .st18{opacity:0.25;clip-path:url(#SVGID_28_);}
+#tsworkerrh .st19{opacity:0.35;clip-path:url(#SVGID_30_);}
+#tsworkerrh .st20{opacity:0.35;clip-path:url(#SVGID_32_);}
+#tsworkerrh .st21{opacity:0.35;clip-path:url(#SVGID_34_);}
+
+#talentedarm, #talentedforearm,
+#head_3_, #talentedworkerarm{
+    transition: var(--transition);
+}
+
+.transformed_workedarm{
+    transform: rotate(15deg) translate(100px, -20px);
+}
+.transformed_head_3_{
+    transform: rotate(7deg) translate(20px, -25px);
+}
+.transformed_talentedarm{
+    transform: rotate(-5deg) translate(-35px, -5px);
+}
+.transformed_talentedforearm{
+    transform: rotate(3deg) translate(20px, -5px);
+}
+
+
+
+.tsBtn img, #tsToTop img{
+    transition: var(--transition);
+    position: relative;
+    animation: talentedbounce 500ms alternate infinite ease;
+}
+
+@keyframes talentedbounce{
+
+    from {
+        top: 1px;
+    }
+    top {
+        top: 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    #tsGallery .tsFlex{
+       flex-wrap: wrap;
+       gap: 0;
+    }
+    #tsGallery .tsFlex img{
+        flex: 0 1 49%;        
+        max-width:49.35%;
+        margin:0;
+        padding:0;
+    }
+
+    .tsMobileNav{
+        display: block;
+    }
+    .tsFlex{
+        display: block;
+    }
+    form input, form textarea{
+        min-width: 300px;
+        width: 100%;
+    }
+    .tsContainer{
+        width: 90%;
+    }
+    header .tsFlex{
+        display: flex;
+    }
+    .tsFixed{
+        padding: .5rem 0;
+    }
+    .tsFixed header #tsX, .tsFixed header #tsY, .tsFixed header #tsZ{
+        background-color: var(--ts-dark-yellow);
+    }
+    #tsMobileMenu{
+        display: block;
+        width: 100%;
+        text-align: center;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        padding-top: 100px;
+        background-color: var(--ts-white);
+    }
+    header nav #tsMobileMenu.tsDisplayNone{
+        left: -999px;
+        transition: var(--transition);
+    }
+    #tsLogo{
+        position: relative;
+        z-index: 9999999999;
+    }
+    header nav ul a {
+        border-top: 1px solid var(--ts-light-green);
+        line-height: 2;
+    }
+    header nav ul li:last-of-type a {
+        background-color: var(--ts-green);
+        color: var(--ts-white);
+        border-radius: 0;
+        font-weight: bold;
+    }
+    .tsBloc{
+        padding: 5rem 0;
+    }
+
+    #tsQueFaisonsNous img, 
+    #tsQuiSommesNous img{
+        display: none;
+    }
+    form{
+        margin-top: 3rem;
+    }
+ }
