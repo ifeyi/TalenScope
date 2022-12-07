@@ -101,7 +101,8 @@ header ul a{
     transition: var(--transition);
 }
 header ul a:hover,
-header ul a:focus{
+header ul a:focus, 
+header ul a.tsactive {
     background-color: var(--ts-light-green);
     color: var(--ts-darker-green);
     border-radius: 50px;
@@ -132,7 +133,8 @@ header ul li:last-of-type a{
     transition: var(--transition);
 }
 .tsFixed ul a:hover,
-.tsFixed ul a:focus{
+.tsFixed ul a:focus,
+.tsFixed ul a.tsactive {
     background-color: var(--ts-green);
     color: var(--ts-white);
     border-radius: 0;

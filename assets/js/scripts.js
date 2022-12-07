@@ -4,16 +4,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
   
+        document.querySelectorAll('a[href^="#"]').forEach(elt => {
+          elt.classList.remove('tsactive');
+        });
+        
+        anchor.classList.add('tsactive');
+
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             alignToTop: true,
             behavior: 'smooth'
         });
     });
   });
+
+
   
   window.addEventListener('scroll', function(){
     let header = document.querySelector('header');
-    header.classList.toggle("tsFixed", window.scrollY > 100);
+    header.classList.toggle("tsFixed", window.scrollY > 60);
   });
 
   window.addEventListener('scroll', function(){
